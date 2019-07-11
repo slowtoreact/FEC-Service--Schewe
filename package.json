@@ -1,0 +1,47 @@
+{
+  "name": "FEC-Service-Repo-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "start": "webpack-dev-server --open --mode development",
+    "type": "git",
+    "url": "git+https://github.com/schewed/FEC-Service-Repo-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schewed/FEC-Service-Repo-1/issues"
+  },
+  "homepage": "https://github.com/schewed/FEC-Service-Repo-1#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "express": "^4.17.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "prop-types": "^15.7.2",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "jquery": "^3.4.1",
+    "mongodb": "^3.2.7",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sass": "^1.22.3"
+  },
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ]
+}

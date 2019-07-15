@@ -1,9 +1,9 @@
 import React from 'react';
 
 class Dropdown extends React.Component {
-    render () {
+    render() {
         return (
-            <div class="dropdown">
+            <div className="dropdown">
                 <button className="dropbtn"><font face="Calibre-Medium">DENVER</font>
                     <i className="fa fa-caret-down"></i>
                 </button>

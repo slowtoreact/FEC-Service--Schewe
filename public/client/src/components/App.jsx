@@ -1,4 +1,4 @@
-// This will be the main app file
+// Main app file
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from './Navbar.jsx';
@@ -11,22 +11,23 @@ class App extends React.Component {
       this.state = {};
     }
 
-    componentDidMount() {
-      $.get( "http://localhost:3000", function(results) {
-        $( ".result" ).html(results);
-        alert( "Load was performed." );
-      })
-      .done(function() {
-        alert( "second success" );
-      })
-      .fail(function() {
-        alert( "Error loading page" );
-      });
-    }
+    // componentDidMount() {
+    //   Axios.get( "http://localhost:3000", function(results) {
+    //     ( ".result" ).html(results);
+    //     console.log( "Load was performed." );
+    //   })
+    //   .done(function() {
+    //     console.log( "second success" );
+    //   })
+    //   .fail(function() {
+    //     console.log( "Error loading page" );
+    //   });
+    // }
 
     render() {
+      console.log('console log testing');
         return (
-          <div>Testing
+          <div>
             <div>
               <Navbar />
             </div>

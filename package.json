@@ -1,10 +1,10 @@
 {
-  "name": "FEC-Service-Repo-1",
+  "name": "fec-service-repo-1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -33,12 +33,19 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
+    "add": "^2.0.6",
+    "axios": "^0.19.0",
+    "babel-jest": "^24.8.0",
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "jest": "^24.8.0",
     "jquery": "^3.4.1",
     "mongodb": "^3.2.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "sass": "^1.22.3"
+    "react-test-renderer": "^16.8.6",
+    "sass": "^1.22.3",
+    "yarn": "^1.17.3"
   },
   "presets": [
     "@babel/preset-env",

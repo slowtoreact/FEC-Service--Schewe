@@ -1,42 +1,62 @@
-// This will be the main app file
 import React from 'react';
-import ReactDOM from 'react-dom';
-import $ from 'jquery';
 import Search from './Search.js';
-import PhotoBar from './PhotoBar.js';
+
 
 class Navbar extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {};
-    }
-
     render() {
         return (
-          <div>
-            <div>
-              {/*  */}
-              <nav>
-                <div class="nav-fixed">
-                  <a href="#" class="brand-logo">Logo</a>
-                  <Search />
-                  <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">JavaScript</a></li>
-                  </ul>
-                </div>
-              </nav>
-              {/*  */}
+            <div className="navbar">
+                <Search />
+                    <a href="#latest"><font face="Calibre-Medium">THE LATEST</font></a>
+                    <a href="#citybest"><font face="Calibre-Medium">CITY'S BEST</font></a>
+                    <div class="dropdown">
+                        <button className="dropbtn"><font face="Calibre-Medium">DENVER</font>
+                            <i className="fa fa-caret-down"></i>
+                        </button>
+                        <div className="dropdown-content">
+                            <a href="#">Denver</a>
+                            <a href="#">Phoenix/Scottsdale</a>
+                            <a href="#">Las Vegas</a>
+                            <a href="#">Atlanta</a>
+                            <a href="#">Austin</a>
+                            <a href="#">Baltimore</a>
+                            <a href="#">Boston</a>
+                            <a href="#">Charleston</a>
+                            <a href="#">Charlotte</a>
+                            <a href="#">Chicago</a>
+                            <a href="#">Cincinnati</a>
+                            <a href="#">Cleveland</a>
+                            <a href="#">Columbus</a>
+                            <a href="#">Dallas</a>
+                            <a href="#">Detroit</a>
+                            <a href="#">Houston</a>
+                            <a href="#">Indianapolis</a>
+                            <a href="#">Kansas City</a>
+                            <a href="#">Los Angeles</a>
+                            <a href="#">Miami</a>
+                            <a href="#">Milwaukee</a>
+                            <a href="#">Minneapolis</a>
+                            <a href="#">Nashville</a>
+                            <a href="#">New Orleans</a>
+                            <a href="#">New York City</a>
+                            <a href="#">Oakland/Berkely</a>
+                            <a href="#">Orlando</a>
+                            <a href="#">Philadelphia</a>
+                            <a href="#">Portland</a>
+                            <a href="#">Providence</a>
+                            <a href="#">Salt Lake City</a>
+                            <a href="#">San Antonio</a>
+                            <a href="#">San Diego</a>
+                            <a href="#">San Francisco</a>
+                            <a href="#">Savannah</a>
+                            <a href="#">Seattle</a>
+                            <a href="#">St. Louis</a>
+                            <a href="#">Washington, DC</a>
+                        </div>
+                    </div>
             </div>
-            <div>
-              <PhotoBar />
-            </div>
-          </div>
         );
     }
 }
-
-ReactDOM.render(<Navbar />, document.getElementById('app'));
 
 export default Navbar;

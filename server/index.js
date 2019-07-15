@@ -7,12 +7,12 @@ const PORT = 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(express.static(__dirname + '../public/client'));
+app.use(express.static(__dirname + '../public/client/src'));
 
 // middleware as necessary
 
 app.get('/', function (req, res, next) {
-    console.log('test successful');
+    console.log('test successful!');
     res.end();
 });
 

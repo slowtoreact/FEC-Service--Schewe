@@ -1,9 +1,9 @@
 // This will be the main app file
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PhotoBar from './PhotoBar.js';
+import Navbar from './Navbar.jsx';
+import PhotoBar from './PhotoBar.jsx';
 import Axios from 'axios';
-import Bootstrap from 'bootstrap';
 
 class App extends React.Component {
     constructor(props) {
@@ -26,7 +26,7 @@ class App extends React.Component {
 
     render() {
         return (
-          <div>
+          <div>Testing
             <div>
               <Navbar />
             </div>

@@ -1,17 +1,24 @@
 import React from 'react';
 
-class Dropdown extends React.Component {
+class Navbar extends React.Component {
     render() {
         return (
-            <div className="dropdown">
+            <div className="nav">
+                <form onSubmit={(e) => this.props.action.handleSearch(e)}>
+                    <input type="text" className="search" placeholder="Find a great place near you" size="45"/>
+                </form>
                 <a href="#latest" className="nav-link">THE LATEST</a>
                 <a href="#citybest" className="nav-link">CITY'S BEST</a>
-                    <button className="dropbtn"><font face="Calibre-Medium">DENVER</font>
-                        <i className="fa fa-caret-down"></i>
+                <div className="dropdown">
+                    <button className="dropbtn"><font face="Calibre-Medium">DENVER </font>
+                        <i className="fa">&#xf107;</i>
                     </button>
                 <div className="dropdown-content">
+                    <div className="cityselect">- SELECT A CITY -</div>
                     <div><a href="#">Denver</a></div>
+                    <br></br>
                     <div><a href="#">Phoenix/Scottsdale</a></div>
+                    <br></br>
                     <div><a href="#">Las Vegas</a></div>
                     <div><a href="#">Atlanta</a></div>
                     <div><a href="#">Austin</a></div>
@@ -49,12 +56,13 @@ class Dropdown extends React.Component {
                     <div><a href="#">St. Louis</a></div>
                     <div><a href="#">Washington, DC</a></div>
                 </div>
+                </div>
             </div>
         );
     }
 }
 
-export default Dropdown;
+export default Navbar;
 
 
 // class Navbar extends React.Component {
@@ -113,8 +121,3 @@ export default Dropdown;
 //                         <div href="#" className="dropdown-items">Washington, DC</div>
 //                     </div>
 //                 </div>
-//                 </nav>
-//             </div>
-//         );
-//     }
-// }

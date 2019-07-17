@@ -1,6 +1,9 @@
 body {
   background-color: whitesmoke;
 }
+.cityselect {
+  text-align: center;
+}
 
 #nav-bar {
   overflow: hidden;
@@ -69,11 +72,11 @@ body {
 .dropdown-content a:hover {
   background-color: grey;
   cursor: pointer;
+  align-content: center;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-  cursor: pointer;
 }
 
 .navlink {

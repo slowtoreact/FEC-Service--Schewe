@@ -3,33 +3,40 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from './Navbar.jsx';
 import PhotoBar from './PhotoBar.jsx';
-import Axios from 'axios';
+import axios from 'axios';
 
 class App extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {};
+      this.state = {
+        search: ''
+      };
+
+      this.handleSearch = this.handleSearch.bind(this); // bind handleSearch function to App component
+
     }
 
-    // componentDidMount() {
-    //   Axios.get( "http://localhost:3000", function(results) {
-    //     ( ".result" ).html(results);
-    //     console.log( "Load was performed." );
-    //   })
-    //   .done(function() {
-    //     console.log( "second success" );
-    //   })
-    //   .fail(function() {
-    //     console.log( "Error loading page" );
-    //   });
-    // }
+componentDidMount() {
+  axios.get('/')
+  .then(function(response) {
+    console.log(response);
+  })
+  .catch(function(error) {
+    console.log(error);
+  });
+}
+
+handleSearch(dataFromSearch) { // should display what the user entered into the search bar
+  this.setState({
+    search: dataFromSearch
+  }), () => { console.log(`This is what you entered: ${this.state.search}`); }
+}
 
     render() {
-      console.log('console log testing');
         return (
           <div>
             <div>
-              <Navbar />
+              <Navbar action={this.handleSearch} />
             </div>
             <div>
               <PhotoBar />

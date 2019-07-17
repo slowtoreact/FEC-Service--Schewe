@@ -2,50 +2,63 @@ import React from 'react';
 
 class Dropdown extends React.Component {
     render() {
+        const cityArray = ['Denver', 'Phoenix/Scottsdale', 'Las Vegas', 'Atlanta', 'Austin', 'Baltimore', 'Boston', 'Charleston', 'Charlotte', 'Chicago', 'Cincinnati', 'Cleveland', 'Columbus', 'Dallas', 'Detroit', 'Houston', 'Indianapolis', 'Kansas City', 'Los Angeles', 'Miami', 'Milwaukee', 'Nashville', 'New Orleans', 'New York City', 'Oakland/Berkley', 'Orlando', 'Philadelphia', 'Portland', 'Providence', 'Salt Lake City', 'San Antonio', 'San Diego', 'San Francisco', 'Savannah', 'Seattle', 'St. Louis', 'Washington, DC'];
+        const stateArray = ['Colorado', 'Arizona', 'Nevada', 'Georgia', 'Texas', 'Maryland', 'Massachusettes', 'South Carolina', 'North Carolina', 'Illinois', 'Ohio', 'Ohio', 'Ohio', 'Texas', 'Michigan', 'Texas', 'Indiana', 'Missouri', 'California', 'Florida', 'Wisconsin', 'Minnesota', 'Tennesee', 'Louisiana', 'New York', 'California', 'Florida', 'Pittsburg', 'Oregon', 'Rhode Island', 'Utah', 'Texas', 'California', 'California', 'Georgia', 'Washington', 'Missouri', 'District of Columbia'];
+        /*
+        const stateCityObj = {
+            Colorado: 'Denver',
+            Arizona, 'Phoenix/Scottsdale',
+            Nevada: 'Las Vegas',
+            Georgia: 'Atlanta',
+            Texas: 'Austin',
+            Maryland: 'Baltimore',
+            Massachusettes: 'Boston'
+        };
+        */
         return (
             <div className="dropdown">
-                <button className="dropbtn"><font face="Calibre-Medium">DENVER</font>
-                    <i className="fa fa-caret-down"></i>
+                <button className="dropbtn">DENVER <i className="fa">&#xf107;</i>
+                {/* <i className="fa fa-angle-down"></i> */}
                 </button>
                 <div className="dropdown-content">
-                    <a href="#">Denver</a>
-                    <a href="#">Phoenix/Scottsdale</a>
-                    <a href="#">Las Vegas</a>
-                    <a href="#">Atlanta</a>
-                    <a href="#">Austin</a>
-                    <a href="#">Baltimore</a>
-                    <a href="#">Boston</a>
-                    <a href="#">Charleston</a>
-                    <a href="#">Charlotte</a>
-                    <a href="#">Chicago</a>
-                    <a href="#">Cincinnati</a>
-                    <a href="#">Cleveland</a>
-                    <a href="#">Columbus</a>
-                    <a href="#">Dallas</a>
-                    <a href="#">Detroit</a>
-                    <a href="#">Houston</a>
-                    <a href="#">Indianapolis</a>
-                    <a href="#">Kansas City</a>
-                    <a href="#">Los Angeles</a>
-                    <a href="#">Miami</a>
-                    <a href="#">Milwaukee</a>
-                    <a href="#">Minneapolis</a>
-                    <a href="#">Nashville</a>
-                    <a href="#">New Orleans</a>
-                    <a href="#">New York City</a>
-                    <a href="#">Oakland/Berkely</a>
-                    <a href="#">Orlando</a>
-                    <a href="#">Philadelphia</a>
-                    <a href="#">Portland</a>
-                    <a href="#">Providence</a>
-                    <a href="#">Salt Lake City</a>
-                    <a href="#">San Antonio</a>
-                    <a href="#">San Diego</a>
-                    <a href="#">San Francisco</a>
-                    <a href="#">Savannah</a>
-                    <a href="#">Seattle</a>
-                    <a href="#">St. Louis</a>
-                    <a href="#">Washington, DC</a>
+                    <div href="#" className="dropdown-items">Denver</div>
+                    <div href="#" className="dropdown-items">Phoenix/Scottsdale</div>
+                    <div href="#" className="dropdown-items">Las Vegas</div>
+                    <div href="#" className="dropdown-items">Atlanta</div>
+                    <div href="#" className="dropdown-items">Austin</div>
+                    <div href="#" className="dropdown-items">Baltimore</div>
+                    <div href="#" className="dropdown-items">Boston</div>
+                    <div href="#" className="dropdown-items">Charleston</div>
+                    <div href="#" className="dropdown-items">Charlotte</div>
+                    <div href="#" className="dropdown-items">Chicago</div>
+                    <div href="#" className="dropdown-items">Cincinnati</div>
+                    <div href="#" className="dropdown-items">Cleveland</div>
+                    <div href="#" className="dropdown-items">Columbus</div>
+                    <div href="#" className="dropdown-items">Dallas</div>
+                    <div href="#" className="dropdown-items">Detroit</div>
+                    <div href="#" className="dropdown-items">Houston</div>
+                    <div href="#" className="dropdown-items">Indianapolis</div>
+                    <div href="#" className="dropdown-items">Kansas City</div>
+                    <div href="#" className="dropdown-items">Los Angeles</div>
+                    <div href="#" className="dropdown-items">Miami</div>
+                    <div href="#" className="dropdown-items">Milwaukee</div>
+                    <div href="#" className="dropdown-items">Minneapolis</div>
+                    <div href="#" className="dropdown-items">Nashville</div>
+                    <div href="#" className="dropdown-items">New Orleans</div>
+                    <div href="#" className="dropdown-items">New York City</div>
+                    <div href="#" className="dropdown-items">Oakland/Berkely</div>
+                    <div href="#" className="dropdown-items">Orlando</div>
+                    <div href="#" className="dropdown-items">Philadelphia</div>
+                    <div href="#" className="dropdown-items">Portland</div>
+                    <div href="#" className="dropdown-items">Providence</div>
+                    <div href="#" className="dropdown-items">Salt Lake City</div>
+                    <div href="#" className="dropdown-items">San Antonio</div>
+                    <div href="#" className="dropdown-items">San Diego</div>
+                    <div href="#" className="dropdown-items">San Francisco</div>
+                    <div href="#" className="dropdown-items">Savannah</div>
+                    <div href="#" className="dropdown-items">Seattle</div>
+                    <div href="#" className="dropdown-items">St. Louis</div>
+                    <div href="#" className="dropdown-items">Washington, DC</div>
                 </div>
             </div>
         );

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack -d --watch"
+    "build": "webpack -d --watch",
+    "start": "npm run build && node index.js"
   },
   "repository": {
     "start": "webpack-dev-server --open --mode development",
@@ -47,6 +48,7 @@
     "react-test-renderer": "^16.8.6",
     "reactstrap": "^8.0.1",
     "sass": "^1.22.3",
+    "webkit-npm": "^3.1.1",
     "yarn": "^1.17.3"
   },
   "presets": [

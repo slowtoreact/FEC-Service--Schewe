@@ -10,34 +10,44 @@ class App extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        search: ''
+        search: '',
+        dropdownIsHidden: true
       };
 
-      this.handleSearch = this.handleSearch.bind(this); // bind handleSearch function to App component
-
+      // this.handleSearch = this.handleSearch.bind(this); // bind handleSearch function to App component
     }
 
 componentDidMount() {
   axios.get('/')
   .then(function(response) {
-    console.log(response);
+    //console.log(response);
   })
   .catch(function(error) {
-    console.log(error);
+    //console.log(error);
   });
 }
 
-handleSearch(dataFromSearch) { // should display what the user entered into the search bar
+toggleDropdown() {
   this.setState({
-    search: dataFromSearch
-  }), () => { console.log(`This is what you entered: ${this.state.search}`); }
+    dropdownIsHidden: !this.state.dropdownIsHidden
+  });
 }
+
+handleDropdownClick () {
+  this.toggleDropdown();
+}
+
+// handleSearch(dataFromSearch) { // should display what the user entered into the search bar
+//   this.setState({
+//     search: dataFromSearch
+//   }), () => { console.log(`This is what you entered: ${this.state.search}`); }
+// }
 
     render() {
         return (
           <div>
-            <div>
-              <Navbar action={this.handleSearch} />
+            <div className="navwrapper">
+              <Navbar action={this.handleSearch} isHidden={this.state.dropdownIsHidden} clickHandler={this.handleDropdownClick.bind(this)}/>
             </div>
             <div>
               <PhotoBar />
@@ -47,6 +57,6 @@ handleSearch(dataFromSearch) { // should display what the user entered into the 
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('nav'));
 
 export default App;

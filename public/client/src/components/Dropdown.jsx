@@ -1,68 +1,163 @@
 import React from 'react';
 
-class Dropdown extends React.Component {
-    render() {
-        const cityArray = ['Denver', 'Phoenix/Scottsdale', 'Las Vegas', 'Atlanta', 'Austin', 'Baltimore', 'Boston', 'Charleston', 'Charlotte', 'Chicago', 'Cincinnati', 'Cleveland', 'Columbus', 'Dallas', 'Detroit', 'Houston', 'Indianapolis', 'Kansas City', 'Los Angeles', 'Miami', 'Milwaukee', 'Nashville', 'New Orleans', 'New York City', 'Oakland/Berkley', 'Orlando', 'Philadelphia', 'Portland', 'Providence', 'Salt Lake City', 'San Antonio', 'San Diego', 'San Francisco', 'Savannah', 'Seattle', 'St. Louis', 'Washington, DC'];
-        const stateArray = ['Colorado', 'Arizona', 'Nevada', 'Georgia', 'Texas', 'Maryland', 'Massachusettes', 'South Carolina', 'North Carolina', 'Illinois', 'Ohio', 'Ohio', 'Ohio', 'Texas', 'Michigan', 'Texas', 'Indiana', 'Missouri', 'California', 'Florida', 'Wisconsin', 'Minnesota', 'Tennesee', 'Louisiana', 'New York', 'California', 'Florida', 'Pittsburg', 'Oregon', 'Rhode Island', 'Utah', 'Texas', 'California', 'California', 'Georgia', 'Washington', 'Missouri', 'District of Columbia'];
-        /*
-        const stateCityObj = {
-            Colorado: 'Denver',
-            Arizona, 'Phoenix/Scottsdale',
-            Nevada: 'Las Vegas',
-            Georgia: 'Atlanta',
-            Texas: 'Austin',
-            Maryland: 'Baltimore',
-            Massachusettes: 'Boston'
-        };
-        */
-        return (
-            <div className="dropdown">
-                <button className="dropbtn">DENVER <i className="fa">&#xf107;</i>
-                {/* <i className="fa fa-angle-down"></i> */}
-                </button>
-                <div className="dropdown-content">
-                    <div href="#" className="dropdown-items">Denver</div>
-                    <div href="#" className="dropdown-items">Phoenix/Scottsdale</div>
-                    <div href="#" className="dropdown-items">Las Vegas</div>
-                    <div href="#" className="dropdown-items">Atlanta</div>
-                    <div href="#" className="dropdown-items">Austin</div>
-                    <div href="#" className="dropdown-items">Baltimore</div>
-                    <div href="#" className="dropdown-items">Boston</div>
-                    <div href="#" className="dropdown-items">Charleston</div>
-                    <div href="#" className="dropdown-items">Charlotte</div>
-                    <div href="#" className="dropdown-items">Chicago</div>
-                    <div href="#" className="dropdown-items">Cincinnati</div>
-                    <div href="#" className="dropdown-items">Cleveland</div>
-                    <div href="#" className="dropdown-items">Columbus</div>
-                    <div href="#" className="dropdown-items">Dallas</div>
-                    <div href="#" className="dropdown-items">Detroit</div>
-                    <div href="#" className="dropdown-items">Houston</div>
-                    <div href="#" className="dropdown-items">Indianapolis</div>
-                    <div href="#" className="dropdown-items">Kansas City</div>
-                    <div href="#" className="dropdown-items">Los Angeles</div>
-                    <div href="#" className="dropdown-items">Miami</div>
-                    <div href="#" className="dropdown-items">Milwaukee</div>
-                    <div href="#" className="dropdown-items">Minneapolis</div>
-                    <div href="#" className="dropdown-items">Nashville</div>
-                    <div href="#" className="dropdown-items">New Orleans</div>
-                    <div href="#" className="dropdown-items">New York City</div>
-                    <div href="#" className="dropdown-items">Oakland/Berkely</div>
-                    <div href="#" className="dropdown-items">Orlando</div>
-                    <div href="#" className="dropdown-items">Philadelphia</div>
-                    <div href="#" className="dropdown-items">Portland</div>
-                    <div href="#" className="dropdown-items">Providence</div>
-                    <div href="#" className="dropdown-items">Salt Lake City</div>
-                    <div href="#" className="dropdown-items">San Antonio</div>
-                    <div href="#" className="dropdown-items">San Diego</div>
-                    <div href="#" className="dropdown-items">San Francisco</div>
-                    <div href="#" className="dropdown-items">Savannah</div>
-                    <div href="#" className="dropdown-items">Seattle</div>
-                    <div href="#" className="dropdown-items">St. Louis</div>
-                    <div href="#" className="dropdown-items">Washington, DC</div>
-                </div>
+const Dropdown = (props) => {
+    return (
+        <div className="dropdown-content">
+            <div className="cityselect">- SELECT A CITY -</div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Denver</a></div>
+                    <div className="state">COLORADO</div>
             </div>
-        );
-    }
+            <div className="citystatebox">
+                <div className="city"><a href="#">Phoenix/Scottsdale</a></div>
+                    <div className="state">ARIZONA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Las Vegas</a></div>
+                    <div className="state">NEVADA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Atlanta</a></div>
+                    <div className="state">GEORGIA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Austin</a></div>
+                    <div className="state">TEXAS</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Baltimore</a></div>
+                    <div className="state">MARYLAND</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Boston</a></div>
+                    <div className="state">MASACHUSETTS</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Charleston</a></div>
+                    <div className="state">SOUTH CAROLINA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Charlotte</a></div>
+                    <div className="state">NORTH CAROLINA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Chicago</a></div>
+                    <div className="state">ILLINOIS</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Cincinnati</a></div>
+                    <div className="state">OHIO</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Cleveland</a></div>
+                    <div className="state">OHIO</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Columbus</a></div>
+                    <div className="state">OHIO</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Dallas</a></div>
+                    <div className="state">TEXAS</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Detroit</a></div>
+                    <div className="state">MICHIGAN</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Houston</a></div>
+                    <div className="state">TEXAS</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Indianapolis</a></div>
+                    <div className="state">INDIANA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Kansas City</a></div>
+                    <div className="state">MISSOURI</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Los Angeles</a></div>
+                    <div className="state">CALIFORNIA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Miami</a></div>
+                    <div className="state">FLORIDA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Milwaukee</a></div>
+                    <div className="state">WISCONSIN</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Minneapolis</a></div>
+                    <div className="state">MINNESOTA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Nashville</a></div>
+                    <div className="state">TENNESSEE</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">New Orleans</a></div>
+                    <div className="state">LOUISIANA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">New York City</a></div>
+                    <div className="state">NEW YORK</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Oakland/Berkely</a></div>
+                    <div className="state">CALIFORNIA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Orlando</a></div>
+                    <div className="state">FLORIDA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Philadelphia</a></div>
+                    <div className="state">PITTSBURGH</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Portland</a></div>
+                    <div className="state">OREGON</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Providence</a></div>
+                    <div className="state">RHODE ISLAND</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Salt Lake City</a></div>
+                    <div className="state">UTAH</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">San Antonio</a></div>
+                    <div className="state">TEXAS</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">San Diego</a></div>
+                    <div className="state">CALIFORNIA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">San Francisco</a></div>
+                    <div className="state">CALIFORNIA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Savannah</a></div>
+                    <div className="state">GEORGIA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Seattle</a></div>
+                <div className="state">WASHINGTON</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">St. Louis</a></div>
+                <div className="state">MISSOURI</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Washington, DC</a></div>
+                <div className="state">DISTRICT OF COLUMBIA</div>
+            </div>
+        </div>
+    );
 }
 
 export default Dropdown;

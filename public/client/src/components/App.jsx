@@ -13,7 +13,6 @@ class App extends React.Component {
         search: '',
         dropdownIsHidden: true
       };
-
       // this.handleSearch = this.handleSearch.bind(this); // bind handleSearch function to App component
     }
 
@@ -21,9 +20,9 @@ componentDidMount() {
   axios.get('/')
   .then(function(response) {
     //console.log(response);
+    // this.setState...not needed
   })
   .catch(function(error) {
-    //console.log(error);
   });
 }
 

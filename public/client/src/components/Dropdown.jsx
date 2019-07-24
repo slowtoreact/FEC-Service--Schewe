@@ -114,7 +114,11 @@ const Dropdown = (props) => {
             </div>
             <div className="citystatebox">
                 <div className="city"><a href="#">Philadelphia</a></div>
-                    <div className="state">PITTSBURGH</div>
+                    <div className="state">PENNSYLVANIA</div>
+            </div>
+            <div className="citystatebox">
+                <div className="city"><a href="#">Pittsburgh</a></div>
+                    <div className="state">PENNSYLVANIA</div>
             </div>
             <div className="citystatebox">
                 <div className="city"><a href="#">Portland</a></div>

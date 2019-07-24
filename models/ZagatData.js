@@ -6,7 +6,8 @@ mongoose.connect('mongodb://localhost:3000/FEC', { useNewUrlParser: true });
 var db = mongoose.connection;
 
 var ZagatSchema = new Schema({
-    restaurantName: String
+    city: String,
+    state: String
 })
 
 module.exports = db;

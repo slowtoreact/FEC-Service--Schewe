@@ -20,6 +20,6 @@ app.get('/', function (req, res, next) {
     res.end();
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3333, () => {
   console.log(`listening on port ${PORT}`);
 });

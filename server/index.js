@@ -11,7 +11,7 @@ app.use(cors());
 
 // comment out the below line when setting up the proxy
 // need .env for this file and express.static for the proxy
-app.use(express.static(__dirname + '/../public/client/dist'));
+app.use(express.static(__dirname + '/../client/dist'));
 
 // middleware as necessary
 
